@@ -3,103 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Maruf Hossen - Portfolio</title>
+    <title>Your Name - Graphic Designer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">Md Maruf Hossen</div>
-            <ul class="nav-links">
+            <a href="#" class="logo">YourName.</a>
+            <ul>
+                <li><a href="#work">Work</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
         <section id="hero">
-            <div class="hero-text">
-                <h1>Hello, I'm <span class="highlight">Md Maruf Hossen</span></h1>
-                <p>A Passionate Web Developer from Bangladesh</p>
-                <a href="#projects" class="btn">View My Work</a>
+            <div class="hero-content">
+                <h1>Creative Graphic Designer</h1>
+                <p>I design beautiful and effective brand identities, logos, and web visuals.</p>
+                <a href="#work" class="btn">View My Portfolio</a>
+            </div>
+        </section>
+
+        <!-- Work/Portfolio Section -->
+        <section id="work">
+            <h2>My Work</h2>
+            <div class="portfolio-gallery">
+                <!-- Add your project images here -->
+                <div class="gallery-item"><img src="https://via.placeholder.com/400x300.png?text=Logo+Design" alt="Project 1"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/400x300.png?text=Branding" alt="Project 2"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/400x300.png?text=Web+UI" alt="Project 3"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/400x300.png?text=Poster+Design" alt="Project 4"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/400x300.png?text=Social+Media+Post" alt="Project 5"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/400x300.png?text=Illustration" alt="Project 6"></div>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <img src="https://via.placeholder.com/150" alt="Your Photo" class="profile-pic">
-                <p>
-                    Write a short and engaging paragraph about yourself here. Talk about your passion for web development, what technologies you enjoy working with, and what you are currently learning or building. Keep it professional but personal.
-                </p>
+            <div class="about-container">
+                <img src="https://via.placeholder.com/250.png?text=Your+Photo" alt="Your Name" class="about-photo">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I'm a passionate graphic designer with a love for creating clean, smart, and effective designs. I specialize in logo design, brand identity, and digital illustration. My goal is to help brands communicate their story through compelling visuals.</p>
+                    <a href="/path/to/your/resume.pdf" class="btn" download>Download Resume</a>
+                </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>My Skills</h2>
-            <div class="skills-container">
-                <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
-                <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
-                <div class="skill-item"><i class="fab fa-js-square"></i> JavaScript</div>
-                <div class="skill-item"><i class="fab fa-react"></i> React</div>
-                <div class="skill-item"><i class="fab fa-node-js"></i> Node.js</div>
-                <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Project 1">
-                    <h3>Project One</h3>
-                    <p>A brief description of your project. What problem does it solve? What technologies did you use?</p>
-                    <a href="#" class="btn" target="_blank">View Project</a>
+        <!-- Services Section -->
+        <section id="services">
+            <h2>What I Do</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <i class="fas fa-pen-ruler"></i>
+                    <h3>Logo & Branding</h3>
+                    <p>Creating memorable logos and complete brand identity packages.</p>
                 </div>
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Project 2">
-                    <h3>Project Two</h3>
-                    <p>A brief description of your project. What problem does it solve? What technologies did you use?</p>
-                    <a href="#" class="btn" target="_blank">View Project</a>
+                <div class="service-card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Web & UI Design</h3>
+                    <p>Designing intuitive and beautiful user interfaces for websites.</p>
                 </div>
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Project 3">
-                    <h3>Project Three</h3>
-                    <p>A brief description of your project. What problem does it solve? What technologies did you use?</p>
-                    <a href="#" class="btn" target="_blank">View Project</a>
+                <div class="service-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Illustration</h3>
+                    <p>Crafting custom illustrations for digital and print media.</p>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>I'm currently open to new opportunities. Feel free to contact me!</p>
-            <a href="mailto:your.email@example.com" class="btn">Email Me</a>
-            <div class="social-links">
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <h2>Let's Create Together</h2>
+            <p>Have a project in mind? I'd love to hear from you.</p>
+            <a href="mailto:your.email@example.com" class="btn">your.email@example.com</a>
+            <div class="social-icons">
+                <a href="#" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                <a href="#" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Md Maruf Hossen. All rights reserved.</p>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
