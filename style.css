@@ -235,6 +235,7 @@ nav a:hover {
     background: var(--white-color);
     color: var(--dark-color);
     margin-top: 20px;
+    margin-bottom: 40px; /* আইকন থেকে বাটনটিকে একটু দূরে রাখার জন্য */
 }
 
 #contact .btn:hover {
@@ -243,19 +244,25 @@ nav a:hover {
     border-color: var(--white-color);
 }
 
+/* --- Social Icons Styling --- */
 .social-icons {
-    margin-top: 40px;
+    display: flex;
+    justify-content: center; /* আইকনগুলোকে মাঝখানে আনবে */
+    align-items: center;
+    gap: 25px; /* প্রতিটি আইকনের মধ্যে ফাঁকা জায়গা তৈরি করবে */
 }
 
 .social-icons a {
-    color: var(--white-color);
-    font-size: 1.8rem;
-    margin: 0 15px;
-    transition: color 0.3s ease;
+    color: var(--white-color); /* আইকনের রঙ সাদা করবে */
+    font-size: 1.8rem;         /* আইকনের আকার নির্ধারণ করবে */
+    text-decoration: none;     /* নিচের আন্ডারলাইন দূর করবে */
+    transition: color 0.3s ease, transform 0.3s ease; /* স্মুথ ইফেক্টের জন্য ট্রানজিশন */
+    display: inline-block;     /* transform প্রোপার্টি সঠিকভাবে কাজ করার জন্য */
 }
 
 .social-icons a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* আপনার নির্ধারিত দ্বিতীয় রঙ */
+    transform: translateY(-5px);   /* আইকনটি সামান্য উপরে উঠবে */
 }
 
 /* --- Footer --- */
