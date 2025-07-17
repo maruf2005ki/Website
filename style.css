@@ -126,20 +126,35 @@ nav a:hover {
     overflow: hidden;
 }
 
+/* --- Hero Section - Text Styling Improvement --- */
 .hero-content {
     position: relative;
     z-index: 2;
+    text-align: left;
+    max-width: 700px;
+    padding: 0 20px;
 }
 
 .hero-content h1 {
-    font-size: 3.8rem;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+.hero-content h1 span {
+    color: var(--primary-color);
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin: 20px 0 40px;
     color: #555;
-    max-width: 600px;
+    max-width: 500px;
+    margin-bottom: 40px;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 20px;
 }
 
 /* --- Animated Blobs --- */
