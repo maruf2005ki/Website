@@ -120,17 +120,45 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #ece9e6, #ffffff);
+    color: var(--white-color);
+
+    /* সুন্দর একটি গ্র্যাডিয়েন্ট */
+    background: linear-gradient(45deg, #4a47a3, #706fd3, #3498db, #f1c40f);
+    background-size: 400% 400%; /* অ্যানিমেশনের জন্য সাইজ বড় করা */
+    animation: gradientAnimation 15s ease infinite;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
+    color: var(--white-color);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* লেখায় হালকা শ্যাডো */
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin: 20px 0 40px;
-    color: #555;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+}
+
+/* বাটনের স্টাইল পরিবর্তন */
+#hero .btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white-color);
+    border: 2px solid var(--white-color);
+    backdrop-filter: blur(5px);
+}
+
+#hero .btn:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* --- Work/Portfolio Section --- */
