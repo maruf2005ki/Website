@@ -10,9 +10,11 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-
     <!-- Animated particles background -->
     <div id="particles-js"></div>
+
+    <!-- Wave Animation Canvas -->
+    <canvas id="wave-canvas"></canvas>
 
     <header>
         <nav>
@@ -132,6 +134,35 @@
 
     <!-- tsParticles scripts for animated background -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <!-- Wave Animation Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/wavify@1.1.0/dist/wavify.js"></script>
+    <script>
+        // Example: Simple blue animated wave using wavify
+        const waveCanvas = document.getElementById('wave-canvas');
+        waveCanvas.width = window.innerWidth;
+        waveCanvas.height = 120;
+        const ctx = waveCanvas.getContext('2d');
+
+        function drawWave() {
+            ctx.clearRect(0, 0, waveCanvas.width, waveCanvas.height);
+            ctx.beginPath();
+            ctx.moveTo(0, 60);
+            for (let x = 0; x <= waveCanvas.width; x++) {
+                ctx.lineTo(x, 60 + 20 * Math.sin((x + Date.now() / 20) / 40));
+            }
+            ctx.lineTo(waveCanvas.width, waveCanvas.height);
+            ctx.lineTo(0, waveCanvas.height);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(74, 71, 163, 0.2)';
+            ctx.fill();
+            requestAnimationFrame(drawWave);
+        }
+        drawWave();
+        window.addEventListener('resize', () => {
+            waveCanvas.width = window.innerWidth;
+        });
+    </script>
     <script>
         tsParticles.load("particles-js", {
             background: { color: "transparent" },

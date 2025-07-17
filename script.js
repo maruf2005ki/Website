@@ -88,3 +88,12 @@ window.addEventListener('load', () => {
     retina_detect: true
   });
 });
+
+// Wave Animation
+const myWave = wavify(document.querySelector('#wave-canvas'), {
+  height: 60,
+  bones: 4,
+  amplitude: 40,
+  color: 'rgba(236, 240, 241, 0.8)', // হালকা ধূসর রঙ
+  speed: 0.25
+});

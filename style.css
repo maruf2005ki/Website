@@ -120,7 +120,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f2f5; /* একটি সুন্দর অফ-হোয়াইট রঙ */
+    background: transparent; /* ব্যাকগ্রাউন্ড স্বচ্ছ থাকবে */
     position: relative;
     overflow: hidden; /* ব্লবগুলো যেন বাইরে না যায় */
 }
@@ -373,4 +373,15 @@ footer {
     to {
         transform: translate(100px, 50px) rotate(180deg);
     }
+}
+
+/* --- Wave Canvas Background --- */
+#wave-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 160px;
+    z-index: -1;
+    pointer-events: none;
 }
