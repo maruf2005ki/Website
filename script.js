@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
   AOS.init({
     duration: 800,
     easing: 'ease-in-out',
-    once: true,
+    once: false, // অ্যানিমেশনটি যতবার স্ক্রল করা হবে, ততবার হবে
     mirror: false,
     anchorPlacement: 'top-bottom',
   });
