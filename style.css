@@ -120,8 +120,9 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent; /* Hero সেকশনের নিজস্ব ব্যাকগ্রাউন্ড স্বচ্ছ থাকবে */
-    color: var(--white-color); /* লেখার রঙ সাদা হবে */
+    background-color: #f0f2f5; /* একটি সুন্দর অফ-হোয়াইট রঙ */
+    position: relative;
+    overflow: hidden; /* ব্লবগুলো যেন বাইরে না যায় */
 }
 
 .hero-content {
@@ -311,4 +312,65 @@ footer {
     .hero-content h1 { font-size: 2.5rem; }
     .about-container { flex-direction: column; }
     nav ul { display: none; } /* Simple hide for mobile, can be replaced with a burger menu */
+}
+
+/* --- Hero Section - Animated Blobs --- */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f5; /* একটি সুন্দর অফ-হোয়াইট রঙ */
+    position: relative;
+    overflow: hidden; /* ব্লবগুলো যেন বাইরে না যায় */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Animated Blobs --- */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px); /* ব্লবগুলোকে নরম এবং ঝাপসা করে */
+    animation: move 25s infinite alternate;
+}
+
+.blob1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(74, 71, 163, 0.3); /* পার্পল */
+    top: -150px;
+    left: -150px;
+}
+
+.blob2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(112, 111, 211, 0.3); /* হালকা পার্পল */
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 3s;
+    animation-direction: alternate-reverse;
+}
+
+.blob3 {
+    width: 250px;
+    height: 250px;
+    background: rgba(52, 152, 219, 0.2); /* নীল */
+    bottom: 50px;
+    left: 100px;
+    animation-delay: 6s;
+}
+
+/* ব্লবগুলোর নড়াচড়ার জন্য অ্যানিমেশন */
+@keyframes move {
+    from {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    to {
+        transform: translate(100px, 50px) rotate(180deg);
+    }
 }
