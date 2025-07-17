@@ -1,13 +1,17 @@
+/* --- Google Font Import --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap' );
 
+/* --- CSS Variables (Root) --- */
 :root {
     --primary-color: #4a47a3; /* A nice purple */
     --secondary-color: #706fd3;
     --dark-color: #2c3e50;
     --light-color: #ecf0f1;
     --white-color: #ffffff;
+    --off-white-bg: #f0f2f5;
 }
 
+/* --- General Reset & Body --- */
 * {
     margin: 0;
     padding: 0;
@@ -20,23 +24,20 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--light-color);
+    background-color: var(--white-color);
     color: var(--dark-color);
+    line-height: 1.6;
 }
 
-/* --- General Styles --- */
-h1, h2 {
-    font-weight: 700;
-}
-
+/* --- Reusable Components --- */
 section {
-    padding: 80px 10%;
+    padding: 100px 10%;
     text-align: center;
 }
 
 section h2 {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     position: relative;
     display: inline-block;
 }
@@ -47,7 +48,7 @@ section h2::after {
     height: 4px;
     background: var(--primary-color);
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -77,7 +78,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     transition: box-shadow 0.3s ease;
@@ -114,64 +115,83 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section with Animated Blobs --- */
 #hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent; /* ব্যাকগ্রাউন্ড স্বচ্ছ থাকবে */
+    background-color: var(--off-white-bg);
     position: relative;
-    overflow: hidden; /* ব্লবগুলো যেন বাইরে না যায় */
+    overflow: hidden;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* লেখা যেন অন্য কিছুর নিচে না যায় */
+    z-index: 2;
 }
 
 .hero-content h1 {
     font-size: 3.8rem;
-    color: var(--white-color);
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin: 20px 0 40px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #555;
     max-width: 600px;
 }
 
-/* বাটনের স্টাইল পরিবর্তন */
-#hero .btn {
-    background: transparent;
-    color: var(--white-color);
-    border: 2px solid var(--white-color);
+/* --- Animated Blobs --- */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+    animation: move 25s infinite alternate;
 }
 
-#hero .btn:hover {
-    background: var(--white-color);
-    color: var(--primary-color);
+.blob1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(74, 71, 163, 0.3); /* Purple */
+    top: -150px;
+    left: -150px;
 }
 
-/* --- Animated Particles Background --- */
-#particles-js {
-    position: fixed; /* ব্যাকগ্রাউন্ডকে স্ক্রিনে স্থির রাখে */
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #2c3e50; /* ডার্ক ব্লু ব্যাকগ্রাউন্ড */
-    background-image: linear-gradient(to bottom right, #2c3e50, #4a47a3); /* সুন্দর একটি গ্র্যাডিয়েন্ট */
-    z-index: -1; /* এটিকে সবকিছুর পেছনে পাঠায় */
+.blob2 {
+    width: 300px;
+    height: 300px;
+    background: rgba(112, 111, 211, 0.3); /* Light Purple */
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 3s;
+    animation-direction: alternate-reverse;
+}
+
+.blob3 {
+    width: 250px;
+    height: 250px;
+    background: rgba(52, 152, 219, 0.2); /* Blue */
+    bottom: 50px;
+    left: 100px;
+    animation-delay: 6s;
+}
+
+@keyframes move {
+    from {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    to {
+        transform: translate(100px, 50px) rotate(180deg) scale(1.2);
+    }
 }
 
 /* --- Work/Portfolio Section --- */
 .portfolio-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .gallery-item {
@@ -269,7 +289,7 @@ nav a:hover {
     background: var(--white-color);
     color: var(--dark-color);
     margin-top: 20px;
-    margin-bottom: 40px; /* আইকন থেকে বাটনটিকে একটু দূরে রাখার জন্য */
+    margin-bottom: 40px;
 }
 
 #contact .btn:hover {
@@ -278,25 +298,24 @@ nav a:hover {
     border-color: var(--white-color);
 }
 
-/* --- Social Icons Styling --- */
 .social-icons {
     display: flex;
-    justify-content: center; /* আইকনগুলোকে মাঝখানে আনবে */
+    justify-content: center;
     align-items: center;
-    gap: 25px; /* প্রতিটি আইকনের মধ্যে ফাঁকা জায়গা তৈরি করবে */
+    gap: 25px;
 }
 
 .social-icons a {
-    color: var(--white-color); /* আইকনের রঙ সাদা করবে */
-    font-size: 1.8rem;         /* আইকনের আকার নির্ধারণ করবে */
-    text-decoration: none;     /* নিচের আন্ডারলাইন দূর করবে */
-    transition: color 0.3s ease, transform 0.3s ease; /* স্মুথ ইফেক্টের জন্য ট্রানজিশন */
-    display: inline-block;     /* transform প্রোপার্টি সঠিকভাবে কাজ করার জন্য */
+    color: var(--white-color);
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
 .social-icons a:hover {
-    color: var(--secondary-color); /* আপনার নির্ধারিত দ্বিতীয় রঙ */
-    transform: translateY(-5px);   /* আইকনটি সামান্য উপরে উঠবে */
+    color: var(--secondary-color);
+    transform: translateY(-5px);
 }
 
 /* --- Footer --- */
@@ -308,80 +327,8 @@ footer {
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
-    section { padding: 60px 5%; }
-    .hero-content h1 { font-size: 2.5rem; }
+    section { padding: 80px 5%; }
+    .hero-content h1 { font-size: 2.8rem; }
     .about-container { flex-direction: column; }
     nav ul { display: none; } /* Simple hide for mobile, can be replaced with a burger menu */
-}
-
-/* --- Hero Section - Animated Blobs --- */
-#hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f0f2f5; /* একটি সুন্দর অফ-হোয়াইট রঙ */
-    position: relative;
-    overflow: hidden; /* ব্লবগুলো যেন বাইরে না যায় */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-/* --- Animated Blobs --- */
-.blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px); /* ব্লবগুলোকে নরম এবং ঝাপসা করে */
-    animation: move 25s infinite alternate;
-}
-
-.blob1 {
-    width: 400px;
-    height: 400px;
-    background: rgba(74, 71, 163, 0.3); /* পার্পল */
-    top: -150px;
-    left: -150px;
-}
-
-.blob2 {
-    width: 300px;
-    height: 300px;
-    background: rgba(112, 111, 211, 0.3); /* হালকা পার্পল */
-    bottom: -100px;
-    right: -100px;
-    animation-delay: 3s;
-    animation-direction: alternate-reverse;
-}
-
-.blob3 {
-    width: 250px;
-    height: 250px;
-    background: rgba(52, 152, 219, 0.2); /* নীল */
-    bottom: 50px;
-    left: 100px;
-    animation-delay: 6s;
-}
-
-/* ব্লবগুলোর নড়াচড়ার জন্য অ্যানিমেশন */
-@keyframes move {
-    from {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    to {
-        transform: translate(100px, 50px) rotate(180deg);
-    }
-}
-
-/* --- Wave Canvas Background --- */
-#wave-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 160px;
-    z-index: -1;
-    pointer-events: none;
 }
