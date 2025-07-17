@@ -4,21 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md Maruf Hossen - Creative Graphic Designer</title>
-    
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
-    
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    
-    <!-- Your CSS File -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google AdSense (ঐচ্ছিক ) -->
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6643839621415615" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <header>
         <nav>
             <a href="#" class="logo">Md Maruf Hossen</a>
@@ -31,12 +24,11 @@
     </header>
 
     <main>
-        <!-- Hero Section with Improved Text -->
+        <!-- Hero Section (no animation needed here) -->
         <section id="hero">
             <div class="blob blob1"></div>
             <div class="blob blob2"></div>
             <div class="blob blob3"></div>
-
             <div class="hero-content">
                 <h1>Creative <br><span>Graphic Designer</span></h1>
                 <p>I design beautiful and effective brand identities, logos, and web visuals.</p>
@@ -46,23 +38,22 @@
 
         <!-- Work/Portfolio Section -->
         <section id="work">
-            <h2>My Work</h2>
+            <h2 data-aos="fade-up">My Work</h2>
             <div class="portfolio-gallery">
-                <!-- আপনার নিজের ছবিগুলো এখানে যোগ করুন -->
-                <div class="gallery-item"><img src="images/project1.jpg" alt="Creative Logo Design"></div>
-                <div class="gallery-item"><img src="images/project2.jpg" alt="Corporate Branding Package"></div>
-                <div class="gallery-item"><img src="images/project3.jpg" alt="Modern Web UI Design"></div>
-                <div class="gallery-item"><img src="images/project4.jpg" alt="Event Poster Design"></div>
-                <div class="gallery-item"><img src="images/project5.jpg" alt="Social Media Post for a Brand"></div>
-                <div class="gallery-item"><img src="images/project6.jpg" alt="Custom Digital Illustration"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="images/project1.jpg" alt="Creative Logo Design"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="images/project2.jpg" alt="Corporate Branding Package"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300"><img src="images/project3.jpg" alt="Modern Web UI Design"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="images/project4.jpg" alt="Event Poster Design"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="images/project5.jpg" alt="Social Media Post for a Brand"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300"><img src="images/project6.jpg" alt="Custom Digital Illustration"></div>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about">
-            <div class="about-container">
+            <div class="about-container" data-aos="fade-right">
                 <img src="images/your-photo.jpg" alt="Md Maruf Hossen" class="about-photo">
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-left" data-aos-delay="200">
                     <h2>About Me</h2>
                     <p>I'm a passionate graphic designer with a love for creating clean, smart, and effective designs. I specialize in logo design, brand identity, and digital illustration. My goal is to help brands communicate their story through compelling visuals.</p>
                     <a href="resume.pdf" class="btn" download>Download Resume</a>
@@ -72,19 +63,19 @@
 
         <!-- Services Section -->
         <section id="services">
-            <h2>What I Do</h2>
+            <h2 data-aos="fade-up">What I Do</h2>
             <div class="services-container">
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-pen-ruler"></i>
                     <h3>Logo & Branding</h3>
                     <p>Creating memorable logos and complete brand identity packages.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <i class="fas fa-desktop"></i>
                     <h3>Web & UI Design</h3>
                     <p>Designing intuitive and beautiful user interfaces for websites.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <i class="fas fa-palette"></i>
                     <h3>Illustration</h3>
                     <p>Crafting custom illustrations for digital and print media.</p>
@@ -93,7 +84,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" data-aos="fade-in" data-aos-duration="1000">
             <h2>Let's Create Together</h2>
             <p>Have a project in mind? I'd love to hear from you. Find me on social media or send me an email.</p>
             <a href="mailto:maruf.112005@gmail.com" class="btn">maruf.112005@gmail.com</a>
@@ -113,7 +104,11 @@
         <p>&copy; 2025 Md Maruf Hossen. All Rights Reserved.</p>
     </footer>
 
-    <!-- Your JavaScript File -->
+    <!-- AOS Animation JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

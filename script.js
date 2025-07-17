@@ -8,3 +8,14 @@ window.addEventListener('scroll', function() {
         header.style.boxShadow = 'none';
     }
 });
+
+// Wait for the window to load before initializing AOS
+window.addEventListener('load', () => {
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false,
+    anchorPlacement: 'top-bottom',
+  });
+});

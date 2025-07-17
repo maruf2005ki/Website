@@ -27,6 +27,7 @@ body {
     background-color: var(--white-color);
     color: var(--dark-color);
     line-height: 1.6;
+    overflow-x: hidden; /* AOS অ্যানিমেশনের জন্য এটি ভালো */
 }
 
 /* --- Reusable Components --- */
