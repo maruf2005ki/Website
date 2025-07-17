@@ -11,6 +11,9 @@
 </head>
 <body>
 
+    <!-- Animated particles background -->
+    <div id="particles-js"></div>
+
     <header>
         <nav>
             <a href="#" class="logo">Md Maruf Hossen</a>
@@ -122,6 +125,33 @@
         <p>&copy; 2024 Md Maruf Hossen. All Rights Reserved.</p>
     </footer>
 
+    <!-- tsParticles scripts for animated background -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script>
+        tsParticles.load("particles-js", {
+            background: { color: "transparent" },
+            fpsLimit: 60,
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: ["#4a47a3", "#706fd3", "#f1c40f", "#ffffff"] },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 1.5, direction: "none", outModes: { default: "out" } }
+            },
+            interactivity: {
+                events: {
+                    onHover: { enable: true, mode: "repulse" },
+                    onClick: { enable: true, mode: "push" }
+                },
+                modes: {
+                    repulse: { distance: 80, duration: 0.4 },
+                    push: { quantity: 4 }
+                }
+            },
+            detectRetina: true
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
