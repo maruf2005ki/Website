@@ -138,20 +138,16 @@ nav a:hover {
 }
 
 .hero-content h1 {
-    font-size: 4.5rem; /* 'Creative' লেখার সাইজ */
+    font-size: 4.5rem;
     font-weight: 700;
     color: var(--dark-color);
-    line-height: 1.2; /* লাইনগুলোর মধ্যে ফাঁকা জায়গা ঠিক করবে */
+    line-height: 1.1;
     margin-bottom: 25px;
     letter-spacing: -2px;
 }
 
 .hero-content h1 span {
-    font-size: 3.5rem; /* 'Graphic Designer' লেখার সাইজ ছোট করা হলো */
-    font-weight: 600;  /* ওজন কিছুটা কমানো হলো */
     color: var(--primary-color);
-    display: block; /* এটিকে একটি ব্লক-লেভেল এলিমেন্ট বানানো হলো */
-    letter-spacing: -1px; /* অক্ষরগুলোর মধ্যে ফাঁকা জায়গা ঠিক করা হলো */
 }
 
 .hero-content p {
