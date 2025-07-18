@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog - Md Maruf Hossen</title>
+    <!-- আপনার মূল ওয়েবসাইটের CSS ফাইলটি লিঙ্ক করুন -->
+    <link rel="stylesheet" href="../style.css"> 
+    <style>
+        /* ব্লগের জন্য কিছু অতিরিক্ত স্টাইল */
+        .blog-header {
+            padding-top: 120px; /* নেভিগেশন বারের নিচে আনার জন্য */
+            padding-bottom: 60px;
+            text-align: center;
+        }
+        .blog-post-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+        .post-item {
+            background: #fff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            transition: transform 0.3s ease;
+        }
+        .post-item:hover {
+            transform: translateY(-5px);
+        }
+        .post-item h3 {
+            margin-bottom: 10px;
+        }
+        .post-item h3 a {
+            text-decoration: none;
+            color: var(--dark-color);
+        }
+        .post-item p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .post-item .read-more {
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- আপনার মূল ওয়েবসাইটের নেভিগেশন বার (Header) -->
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">Md Maruf Hossen</a>
+            <ul>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li> <!-- ব্লগ পেজের লিঙ্ক -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-header">
+            <h1>My Creative Blog</h1>
+            <p>Thoughts, tutorials, and stories about graphic design.</p>
+        </section>
+
+        <section class="blog-post-list">
+            <!-- প্রথম ব্লগ পোস্টের লিঙ্ক -->
+            <div class="post-item">
+                <h3><a href="post1.html">গ্রাফিক ডিজাইনে রঙের ব্যবহার: একটি পূর্ণাঙ্গ গাইড</a></h3>
+                <p>রঙ ডিজাইনের আত্মা। এই পোস্টে আমরা কালার থিওরি এবং কীভাবে সঠিক রঙ বাছাই করতে হয় তা নিয়ে আলোচনা করেছি...</p>
+                <a href="post1.html" class="read-more">Read More &rarr;</a>
+            </div>
+
+            <!-- দ্বিতীয় ব্লগ পোস্টের লিঙ্ক -->
+            <div class="post-item">
+                <h3><a href="post2.html">একজন নতুন ডিজাইনারের জন্য ৫টি সেরা টুলস</a></h3>
+                <p>সঠিক টুলস আপনার কাজের গতি এবং মান দুটোই বাড়াতে পারে। চলুন দেখে নেওয়া যাক সেরা ৫টি টুলস যা প্রত্যেক ডিজাইনারের জানা উচিত...</p>
+                <a href="post2.html" class="read-more">Read More &rarr;</a>
+            </div>
+
+            <!-- নতুন ব্লগ পোস্ট যোগ করতে উপরের div.post-item অংশটি কপি-পেস্ট করুন -->
+
+        </section>
+    </main>
+
+    <!-- আপনার ওয়েবসাইটের ফুটার -->
+    <footer>
+        <p>&copy; 2024 Md Maruf Hossen. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
